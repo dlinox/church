@@ -1,22 +1,5 @@
 import { DataTableHeaderDTO } from "@/common/models/DataTable.types";
 
-/*
-interface WorkerDTO {
-  id: number | null;
-  documentType: string;
-  documentNumber: string;
-  name: string;
-  paternalLastName: string;
-  maternalLastName: string;
-  birthDate: string | null;
-  gender: string;
-  phoneNumber: string;
-  email: string | null;
-  status: boolean;
-  positionId: number | null;
-  officeId: number | null;
-}
-*/
 export const headers: DataTableHeaderDTO[] = [
   {
     title: "Op.",

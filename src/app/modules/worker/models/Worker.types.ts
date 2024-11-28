@@ -13,7 +13,6 @@ interface WorkerDTO {
   email: string | null;
   status: boolean;
   positionId: number | null;
-  officeId: number | null;
 }
 
 const WorkerRules = {
@@ -28,7 +27,6 @@ const WorkerRules = {
   email: [],
   status: [required],
   positionId: [],
-  officeId: [],
   description: [],
 };
 
@@ -45,7 +43,6 @@ const initWorkerValues = (): WorkerDTO => ({
   email: null,
   status: true,
   positionId: null,
-  officeId: null,
 });
 
 export { type WorkerDTO, WorkerRules, initWorkerValues };

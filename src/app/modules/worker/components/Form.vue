@@ -92,16 +92,6 @@
             </v-col>
 
             <v-col cols="12">
-              <v-select
-                v-model="form.officeId"
-                :items="offices"
-                label="Oficina"
-                item-title="title"
-                item-value="value"
-              />
-            </v-col>
-
-            <v-col cols="12">
               <v-switch
                 :label="form.status ? 'Habilitado' : 'Deshabilitado'"
                 v-model="form.status"
@@ -128,6 +118,7 @@
             :loading="loading"
           ></v-btn>
         </v-card-actions>
+
       </v-card>
     </v-form>
   </v-dialog>
@@ -135,7 +126,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-import { _loadSelect as _loadOfficeSelect } from "@/app/modules/office/services/office.services";
+// import { _loadSelect as _loadOfficeSelect } from "@/app/modules/office/services/office.services";
 import { _loadSelect as _loadPositionSelect } from "@/app/modules/position/services/position.services";
 import {
   type WorkerDTO,
@@ -162,7 +153,7 @@ const form = ref<WorkerDTO>({
   ...props.formState,
 });
 
-const offices = ref<any[]>([]);
+// const offices = ref<any[]>([]);
 const positions = ref<any[]>([]);
 
 const submit = async () => {
@@ -177,7 +168,7 @@ const submit = async () => {
 
 const init = async () => {
   console.log("init");
-  offices.value = await _loadOfficeSelect();
+  // offices.value = await _loadOfficeSelect();
   positions.value = await _loadPositionSelect();
 };
 init();
