@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as c,w as r,r as e,a as s}from"./index-CbSYrZ8Q.js";const _={};function i(d,l){const n=e("v-container"),o=e("v-card");return c(),a(o,{title:"Dashboard",subtitle:"Bienvenido a la aplicación"},{default:r(()=>[s(n,{fluid:""})]),_:1})}const p=t(_,[["render",i]]);export{p as default};

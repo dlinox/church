@@ -24,6 +24,15 @@
           title="Configuración"
         ></v-list-item>
       </template>
+
+      <v-list-item
+        title="Información General"
+        prepend-icon="mdi-circle-small"
+        to="/a/general-infomation"
+        link
+        exact
+        v-permission="['branches.my-branch']"
+      />
       
       <v-list-item
         title="Cargos"
