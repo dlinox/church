@@ -32,6 +32,35 @@ const routes: RouteRecordRaw[] = [
         component: () => import("@/app/modules/dashboard/views/index.vue"),
       },
       {
+        path: "registration",
+        name: "Registration",
+        children: [
+          {
+            path: "baptisms",
+            name: "Baptisms",
+            component: () =>
+              import("@/app/modules/registration/views/baptisms.vue"),
+          },
+          {
+            path: "confirmations",
+            name: "Confirmations",
+            component: () =>
+              import("@/app/modules/registration/views/confirmations.vue"),
+          },
+          {
+            path: "marriages",
+            name: "Marriages",
+            component: () =>
+              import("@/app/modules/registration/views/marriages.vue"),
+          },
+        ],
+      },
+      {
+        path: "certificates",
+        name: "Certificates",
+        component: () => import("@/app/modules/certificate/views/index.vue"),
+      },
+      {
         path: "positions",
         name: "Positions",
         component: () => import("@/app/modules/position/views/index.vue"),

@@ -8,14 +8,57 @@
       link
       exact
     />
+    <!-- Emicion de actas-->
+
+    <v-list-item
+      key="certificates"
+      title="Buscar Actas"
+      prepend-icon="mdi-certificate"
+      to="/a/certificates"
+      link
+      exact
+    />
+
+    <v-list-group value="registration">
+      <template v-slot:activator="{ props }">
+        <v-list-item
+          v-bind="props"
+          prepend-icon="mdi-account-group"
+          title="Inscripciones"
+        ></v-list-item>
+      </template>
+
+      <!-- bautismos -->
+      <v-list-item
+        title="Bautismos"
+        prepend-icon="mdi-circle-small"
+        to="/a/registration/baptisms"
+        link
+        exact
+      />
+
+      <!-- confirmaciones -->
+      <v-list-item
+        title="Confirmaciones"
+        prepend-icon="mdi-circle-small"
+        to="/a/registration/confirmations"
+        link
+        exact
+      />
+
+      <!-- matrimonios -->
+      <v-list-item
+        title="Matrimonios"
+        prepend-icon="mdi-circle-small"
+        to="/a/registration/marriages"
+        link
+        exact
+      />
+    </v-list-group>
 
     <v-list-group
       value="settings"
-      v-permission="[
-        'positions.index',
-        'offices.index',
-        'workers.index',
-      ]"
+      v-permission="['positions.index', 'offices.index', 'workers.index']"
     >
       <template v-slot:activator="{ props }">
         <v-list-item
@@ -33,7 +76,7 @@
         exact
         v-permission="['branches.my-branch']"
       />
-      
+
       <v-list-item
         title="Cargos"
         prepend-icon="mdi-circle-small"
