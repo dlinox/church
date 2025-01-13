@@ -22,3 +22,9 @@
 .v-field__outline {
   display: none !important;
 }
+
+
+/* toaas z index  */
+.v-toast {
+  z-index: 999999 !important;
+}

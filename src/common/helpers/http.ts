@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 
-// import { useToast } from "vue-toast-notification";
-// const toast = useToast();
+import { useToast } from "vue-toast-notification";
+const toast = useToast();
 
 export const http = (
   token: string = "",
@@ -15,30 +15,20 @@ export const http = (
   axiosInstance.interceptors.response.use(
     (response) => {
       if (response.data.message) {
-        // toast.success(response.data.message);
-        console.log(response.data.message);
+        toast.success(response.data.message);
+        console.log(response.data);
       }
       return response;
     },
     (error: any) => {
-      // toast.error(error.response?.data.message || "Error desconocido");
-      console.log(error.response?.data.message || "Error desconocido");
+      toast.error(error.response?.data.message || "Error desconocido");
+      console.log(error.response?.data);
       return Promise.reject(error);
     }
   );
 
   return axiosInstance;
 };
-
-export const httpOTI = axios.create({
-  baseURL: import.meta.env.VITE_APP_OTI_SERVICE_URL as string,
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${
-      import.meta.env.VITE_APP_OTI_SERVICE_TOKEN as string
-    }`,
-  },
-});
 
 export const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_APP_API_URL as string,

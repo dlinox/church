@@ -1,9 +1,10 @@
 export default {
   VCard: {
+    rounded: "lg",
     VCardActions: {
       class: "pa-4",
       VBtn: {
-        variant: "tonal",
+        variant: "flat",
         rounded: "lg",
         color: "primary",
         class: "px-6 text-sm",
@@ -26,6 +27,11 @@ export default {
     hideDetails: "auto",
   },
   VCombobox: {
+    color: "black",
+    rounded: "lg",
+    hideDetails: "auto",
+  },
+  VAutocomplete: {
     color: "black",
     rounded: "lg",
     hideDetails: "auto",
@@ -54,7 +60,7 @@ export default {
   },
   //v-data-table-server
   VDataTableServer: {
-    itemsPerPageText: "Número de filas por página:",
+    itemsPerPageText: "Filas por página:",
     itemsPerPageAll: "Todos",
     noDataText: "No hay datos disponibles",
     loadingText: "Cargando...",

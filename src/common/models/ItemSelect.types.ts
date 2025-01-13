@@ -1,5 +1,5 @@
 interface ItemSelectDTO {
-  value: string | number;
+  value: string;
   title: string;
   disabled?: boolean;
 }

@@ -2,15 +2,15 @@ import { defineStore } from "pinia";
 import { ref, Ref } from "vue";
 import { useRouter } from "vue-router";
 
-import { type Auth } from "@/app/modules/auth/models";
+import { type AuthDTO } from "@/app/modules/core/auth/models";
 
 export const useAuthStore = defineStore("auth", () => {
   const router = useRouter();
-  const authState: Ref<Auth> = ref({
+  const authState: Ref<AuthDTO> = ref({
     token: "",
     user: {
-      full_name: "",
-      redirect_route: "/a",
+      name: "",
+      redirectTo: "/",
       role: "",
       email: "",
     },
@@ -28,17 +28,17 @@ export const useAuthStore = defineStore("auth", () => {
     // router.replace("/");
   };
 
-  const setAuthState = (auth: Auth, isSignIn: boolean = false) => {
+  const setAuthState = (auth: AuthDTO, isSignIn: boolean = false) => {
     authState.value = auth;
-    if (isSignIn) router.push(auth.user.redirect_route);
+    if (isSignIn) router.push(auth.user.redirectTo);
   };
 
   const clearAuthState = () => {
     authState.value = {
       token: "",
       user: {
-        full_name: "",
-        redirect_route: "/a",
+        name: "",
+        redirectTo: "/",
         role: "",
         email: "",
       },

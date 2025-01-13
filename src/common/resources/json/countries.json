@@ -1,0 +1,790 @@
+[
+  {
+    "value": "AFG",
+    "title": "AFGANISTAN"
+  },
+  {
+    "value": "ALB",
+    "title": "ALBANIA"
+  },
+  {
+    "value": "DEU",
+    "title": "ALEMANIA"
+  },
+  {
+    "value": "AND",
+    "title": "ANDORRA"
+  },
+  {
+    "value": "AGO",
+    "title": "ANGOLA"
+  },
+  {
+    "value": "ATG",
+    "title": "ANTIGUA Y BARBUDA"
+  },
+  {
+    "value": "SAU",
+    "title": "ARABIA SAUDITA"
+  },
+  {
+    "value": "DZA",
+    "title": "ARGELIA"
+  },
+  {
+    "value": "ARG",
+    "title": "ARGENTINA"
+  },
+  {
+    "value": "ARM",
+    "title": "ARMENIA"
+  },
+  {
+    "value": "AUS",
+    "title": "AUSTRALIA"
+  },
+  {
+    "value": "AUT",
+    "title": "AUSTRIA"
+  },
+  {
+    "value": "AZE",
+    "title": "AZERBAIYAN"
+  },
+  {
+    "value": "BHS",
+    "title": "BAHAMAS"
+  },
+  {
+    "value": "BHR",
+    "title": "BAHREIN"
+  },
+  {
+    "value": "BGD",
+    "title": "BANGLADESH"
+  },
+  {
+    "value": "BRB",
+    "title": "BARBADOS"
+  },
+  {
+    "value": "BLR",
+    "title": "BELARUS"
+  },
+  {
+    "value": "BEL",
+    "title": "BELGICA"
+  },
+  {
+    "value": "BLZ",
+    "title": "BELICE"
+  },
+  {
+    "value": "BEN",
+    "title": "BENIN"
+  },
+  {
+    "value": "BTN",
+    "title": "BHUTAN"
+  },
+  {
+    "value": "BOL",
+    "title": "BOLIVIA"
+  },
+  {
+    "value": "BIH",
+    "title": "BOSNIA Y HERZEGOVINA"
+  },
+  {
+    "value": "BWA",
+    "title": "BOTSWANA"
+  },
+  {
+    "value": "BRA",
+    "title": "BRASIL"
+  },
+  {
+    "value": "BRN",
+    "title": "BRUNEI DARUSSALAM"
+  },
+  {
+    "value": "BGR",
+    "title": "BULGARIA"
+  },
+  {
+    "value": "BFA",
+    "title": "BURKINA FASO"
+  },
+  {
+    "value": "BDI",
+    "title": "BURUNDI"
+  },
+  {
+    "value": "CPV",
+    "title": "CABO VERDE"
+  },
+  {
+    "value": "KHM",
+    "title": "CAMBOYA"
+  },
+  {
+    "value": "CMR",
+    "title": "CAMERUN"
+  },
+  {
+    "value": "CAN",
+    "title": "CANADA"
+  },
+  {
+    "value": "TCD",
+    "title": "CHAD"
+  },
+  {
+    "value": "CZE",
+    "title": "CHEQUIA"
+  },
+  {
+    "value": "CHL",
+    "title": "CHILE"
+  },
+  {
+    "value": "CHN",
+    "title": "CHINA"
+  },
+  {
+    "value": "CYP",
+    "title": "CHIPRE"
+  },
+  {
+    "value": "COL",
+    "title": "COLOMBIA"
+  },
+  {
+    "value": "COM",
+    "title": "COMORAS"
+  },
+  {
+    "value": "COG",
+    "title": "CONGO"
+  },
+  {
+    "value": "CRI",
+    "title": "COSTA RICA"
+  },
+  {
+    "value": "CIV",
+    "title": "CÔTE D'IVOIRE"
+  },
+  {
+    "value": "HRV",
+    "title": "CROACIA"
+  },
+  {
+    "value": "CUB",
+    "title": "CUBA"
+  },
+  {
+    "value": "DNK",
+    "title": "DINAMARCA"
+  },
+  {
+    "value": "DJI",
+    "title": "DJIBOUTI"
+  },
+  {
+    "value": "DMA",
+    "title": "DOMINICA"
+  },
+  {
+    "value": "ECU",
+    "title": "ECUADOR"
+  },
+  {
+    "value": "EGY",
+    "title": "EGIPTO"
+  },
+  {
+    "value": "SLV",
+    "title": "EL SALVADOR"
+  },
+  {
+    "value": "ARE",
+    "title": "EMIRATOS ÁRABES UNIDOS"
+  },
+  {
+    "value": "ERI",
+    "title": "ERITREA"
+  },
+  {
+    "value": "SVK",
+    "title": "ESLOVAQUIA"
+  },
+  {
+    "value": "SVN",
+    "title": "ESLOVENIA"
+  },
+  {
+    "value": "ESP",
+    "title": "ESPAÑA"
+  },
+  {
+    "value": "USA",
+    "title": "ESTADOS UNIDOS DE AMERICA"
+  },
+  {
+    "value": "EST",
+    "title": "ESTONIA"
+  },
+  {
+    "value": "SWZ",
+    "title": "ESWATINI"
+  },
+  {
+    "value": "ETH",
+    "title": "ETIOPIA"
+  },
+  {
+    "value": "RUS",
+    "title": "FEDERACION DE RUSIA"
+  },
+  {
+    "value": "FJI",
+    "title": "FIJI"
+  },
+  {
+    "value": "PHL",
+    "title": "FILIPINAS"
+  },
+  {
+    "value": "FIN",
+    "title": "FINLANDIA"
+  },
+  {
+    "value": "FRA",
+    "title": "FRANCIA"
+  },
+  {
+    "value": "GAB",
+    "title": "GABON"
+  },
+  {
+    "value": "GMB",
+    "title": "GAMBIA"
+  },
+  {
+    "value": "GEO",
+    "title": "GEORGIA"
+  },
+  {
+    "value": "GHA",
+    "title": "GHANA"
+  },
+  {
+    "value": "GRD",
+    "title": "GRANADA"
+  },
+  {
+    "value": "GRC",
+    "title": "GRECIA"
+  },
+  {
+    "value": "GTM",
+    "title": "GUATEMALA"
+  },
+  {
+    "value": "GIN",
+    "title": "GUINEA"
+  },
+  {
+    "value": "GNQ",
+    "title": "GUINEA ECUATORIAL"
+  },
+  {
+    "value": "GNB",
+    "title": "GUINEA-BISSAU"
+  },
+  {
+    "value": "GUY",
+    "title": "GUYANA"
+  },
+  {
+    "value": "HTI",
+    "title": "HAITI"
+  },
+  {
+    "value": "HND",
+    "title": "HONDURAS"
+  },
+  {
+    "value": "HUN",
+    "title": "HUNGRIA"
+  },
+  {
+    "value": "IND",
+    "title": "INDIA"
+  },
+  {
+    "value": "IDN",
+    "title": "INDONESIA"
+  },
+  {
+    "value": "IRN",
+    "title": "IRAN"
+  },
+  {
+    "value": "IRQ",
+    "title": "IRAQ"
+  },
+  {
+    "value": "IRL",
+    "title": "IRLANDA"
+  },
+  {
+    "value": "ISL",
+    "title": "ISLANDIA"
+  },
+  {
+    "value": "COK",
+    "title": "ISLAS COOK"
+  },
+  {
+    "value": "FRO",
+    "title": "ISLAS FEROE"
+  },
+  {
+    "value": "MHL",
+    "title": "ISLAS MARSHALL"
+  },
+  {
+    "value": "SLB",
+    "title": "ISLAS SALOMON"
+  },
+  {
+    "value": "ISR",
+    "title": "ISRAEL"
+  },
+  {
+    "value": "ITA",
+    "title": "ITALIA"
+  },
+  {
+    "value": "JAM",
+    "title": "JAMAICA"
+  },
+  {
+    "value": "JPN",
+    "title": "JAPON"
+  },
+  {
+    "value": "JOR",
+    "title": "JORDANIA"
+  },
+  {
+    "value": "KAZ",
+    "title": "KAZAJSTAN"
+  },
+  {
+    "value": "KEN",
+    "title": "KENYA"
+  },
+  {
+    "value": "KGZ",
+    "title": "KIRGUISTAN"
+  },
+  {
+    "value": "KIR",
+    "title": "KIRIBATI"
+  },
+  {
+    "value": "KWT",
+    "title": "KUWAIT"
+  },
+  {
+    "value": "LSO",
+    "title": "LESOTHO"
+  },
+  {
+    "value": "LVA",
+    "title": "LETONIA"
+  },
+  {
+    "value": "LBN",
+    "title": "LIBANO"
+  },
+  {
+    "value": "LBR",
+    "title": "LIBERIA"
+  },
+  {
+    "value": "LBY",
+    "title": "LIBIA"
+  },
+  {
+    "value": "LTU",
+    "title": "LITUANIA"
+  },
+  {
+    "value": "LUX",
+    "title": "LUXEMBURGO"
+  },
+  {
+    "value": "MKD",
+    "title": "MACEDONIA DEL NORTE"
+  },
+  {
+    "value": "MDG",
+    "title": "MADAGASCAR"
+  },
+  {
+    "value": "MYS",
+    "title": "MALASIA"
+  },
+  {
+    "value": "MWI",
+    "title": "MALAWI"
+  },
+  {
+    "value": "MDV",
+    "title": "MALDIVAS"
+  },
+  {
+    "value": "MLI",
+    "title": "MALI"
+  },
+  {
+    "value": "MLT",
+    "title": "MALTA"
+  },
+  {
+    "value": "MAR",
+    "title": "MARRUECOS"
+  },
+  {
+    "value": "MUS",
+    "title": "MAURICIO"
+  },
+  {
+    "value": "MRT",
+    "title": "MAURITANIA"
+  },
+  {
+    "value": "MEX",
+    "title": "MEXICO"
+  },
+  {
+    "value": "FSM",
+    "title": "MICRONESIA"
+  },
+  {
+    "value": "MCO",
+    "title": "MONACO"
+  },
+  {
+    "value": "MNG",
+    "title": "MONGOLIA"
+  },
+  {
+    "value": "MNE",
+    "title": "MONTENEGRO"
+  },
+  {
+    "value": "MOZ",
+    "title": "MOZAMBIQUE"
+  },
+  {
+    "value": "MMR",
+    "title": "MYANMAR"
+  },
+  {
+    "value": "NAM",
+    "title": "NAMIBIA"
+  },
+  {
+    "value": "NRU",
+    "title": "NAURU"
+  },
+  {
+    "value": "NPL",
+    "title": "NEPAL"
+  },
+  {
+    "value": "NIC",
+    "title": "NICARAGUA"
+  },
+  {
+    "value": "NER",
+    "title": "NIGER"
+  },
+  {
+    "value": "NGA",
+    "title": "NIGERIA"
+  },
+  {
+    "value": "NIU",
+    "title": "NIUE"
+  },
+  {
+    "value": "NOR",
+    "title": "NORUEGA"
+  },
+  {
+    "value": "NZL",
+    "title": "NUEVA ZELANDIA"
+  },
+  {
+    "value": "OMN",
+    "title": "OMAN"
+  },
+  {
+    "value": "NLD",
+    "title": "PAISES BAJOS"
+  },
+  {
+    "value": "PAK",
+    "title": "PAKISTAN"
+  },
+  {
+    "value": "PLW",
+    "title": "PALAU"
+  },
+  {
+    "value": "PAN",
+    "title": "PANAMA"
+  },
+  {
+    "value": "PNG",
+    "title": "PAPUA NUEVA GUINEA"
+  },
+  {
+    "value": "PRY",
+    "title": "PARAGUAY"
+  },
+  {
+    "value": "PER",
+    "title": "PERU"
+  },
+  {
+    "value": "POL",
+    "title": "POLONIA"
+  },
+  {
+    "value": "PRT",
+    "title": "PORTUGAL"
+  },
+  {
+    "value": "QAT",
+    "title": "QATAR"
+  },
+  {
+    "value": "GBR",
+    "title": "REINO UNIDO DE GRAN BRETAÑA E IRLANDA DEL NORTE"
+  },
+  {
+    "value": "SYR",
+    "title": "REPUBLICA ÁRABE SIRIA"
+  },
+  {
+    "value": "CAF",
+    "title": "REPUBLICA CENTROAFRICANA"
+  },
+  {
+    "value": "KOR",
+    "title": "REPUBLICA DE COREA"
+  },
+  {
+    "value": "MDA",
+    "title": "REPUBLICA DE MOLDOVA"
+  },
+  {
+    "value": "COD",
+    "title": "REPUBLICA DEMOCRATICA DEL CONGO"
+  },
+  {
+    "value": "LAO",
+    "title": "REPUBLICA DEMOCRATICA POPULAR LAO"
+  },
+  {
+    "value": "DOM",
+    "title": "REPUBLICA DOMINICANA"
+  },
+  {
+    "value": "PRK",
+    "title": "REPUBLICA POPULAR DEMOCRATICA DE COREA"
+  },
+  {
+    "value": "TZA",
+    "title": "REPUBLICA UNIDA DE TANZANIA"
+  },
+  {
+    "value": "ROU",
+    "title": "RUMANIA"
+  },
+  {
+    "value": "RWA",
+    "title": "RWANDA"
+  },
+  {
+    "value": "KNA",
+    "title": "SAINT KITTS Y NEVIS"
+  },
+  {
+    "value": "WSM",
+    "title": "SAMOA"
+  },
+  {
+    "value": "SMR",
+    "title": "SAN MARINO"
+  },
+  {
+    "value": "VCT",
+    "title": "SAN VICENTE Y LAS GRANADINAS"
+  },
+  {
+    "value": "LCA",
+    "title": "SANTA LUCIA"
+  },
+  {
+    "value": "STP",
+    "title": "SANTO TOME Y PRINCIPE"
+  },
+  {
+    "value": "SEN",
+    "title": "SENEGAL"
+  },
+  {
+    "value": "SRB",
+    "title": "SERBIA"
+  },
+  {
+    "value": "SYC",
+    "title": "SEYCHELLES"
+  },
+  {
+    "value": "SLE",
+    "title": "SIERRA LEONA"
+  },
+  {
+    "value": "UNK",
+    "title": "SIN DATOS"
+  },
+  {
+    "value": "SGP",
+    "title": "SINGAPUR"
+  },
+  {
+    "value": "SOM",
+    "title": "SOMALIA"
+  },
+  {
+    "value": "LKA",
+    "title": "SRI LANKA"
+  },
+  {
+    "value": "ZAF",
+    "title": "SUDAFRICA"
+  },
+  {
+    "value": "SDN",
+    "title": "SUDAN"
+  },
+  {
+    "value": "SSD",
+    "title": "SUDAN DEL SUR"
+  },
+  {
+    "value": "SWE",
+    "title": "SUECIA"
+  },
+  {
+    "value": "CHE",
+    "title": "SUIZA"
+  },
+  {
+    "value": "SUR",
+    "title": "SURINAME"
+  },
+  {
+    "value": "THA",
+    "title": "TAILANDIA"
+  },
+  {
+    "value": "TJK",
+    "title": "TAYIKISTAN"
+  },
+  {
+    "value": "TLS",
+    "title": "TIMOR-LESTE"
+  },
+  {
+    "value": "TGO",
+    "title": "TOGO"
+  },
+  {
+    "value": "TKL",
+    "title": "TOKELAU"
+  },
+  {
+    "value": "TON",
+    "title": "TONGA"
+  },
+  {
+    "value": "TTO",
+    "title": "TRINIDAD Y TABAGO"
+  },
+  {
+    "value": "TUN",
+    "title": "TUNEZ"
+  },
+  {
+    "value": "TKM",
+    "title": "TURKMENISTAN"
+  },
+  {
+    "value": "TUR",
+    "title": "TURQUIA"
+  },
+  {
+    "value": "TUV",
+    "title": "TUVALU"
+  },
+  {
+    "value": "UKR",
+    "title": "UCRANIA"
+  },
+  {
+    "value": "UGA",
+    "title": "UGANDA"
+  },
+  {
+    "value": "URY",
+    "title": "URUGUAY"
+  },
+  {
+    "value": "UZB",
+    "title": "UZBEKISTAN"
+  },
+  {
+    "value": "VUT",
+    "title": "VANUATU"
+  },
+  {
+    "value": "VEN",
+    "title": "VENEZUELA"
+  },
+  {
+    "value": "VNM",
+    "title": "VIET NAM"
+  },
+  {
+    "value": "YEM",
+    "title": "YEMEN"
+  },
+  {
+    "value": "ZMB",
+    "title": "ZAMBIA"
+  },
+  {
+    "value": "ZWE",
+    "title": "ZIMBABWE"
+  }
+]

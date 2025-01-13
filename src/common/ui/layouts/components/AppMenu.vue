@@ -2,63 +2,53 @@
   <v-list nav density="compact" v-model:opened="open" color="primary">
     <v-list-item
       key="dashboard"
-      to="/a"
+      to="/"
       title="Dashboard"
       prepend-icon="mdi-view-dashboard"
       link
       exact
     />
-    <!-- Emicion de actas-->
 
-    <v-list-item
-      key="certificates"
-      title="Buscar Actas"
-      prepend-icon="mdi-certificate"
-      to="/a/certificates"
-      link
-      exact
-    />
-
-    <v-list-group value="registration">
+    <v-list-group value="celebrations">
       <template v-slot:activator="{ props }">
         <v-list-item
           v-bind="props"
-          prepend-icon="mdi-account-group"
-          title="Inscripciones"
+          prepend-icon="mdi-cross-celtic"
+          title="Celebraciones"
         ></v-list-item>
       </template>
 
-      <!-- bautismos -->
       <v-list-item
         title="Bautismos"
         prepend-icon="mdi-circle-small"
-        to="/a/registration/baptisms"
+        to="/baptisms"
         link
         exact
       />
-
-      <!-- confirmaciones -->
       <v-list-item
         title="Confirmaciones"
         prepend-icon="mdi-circle-small"
-        to="/a/registration/confirmations"
+        to="/confirmations"
         link
         exact
       />
-
-      <!-- matrimonios -->
       <v-list-item
         title="Matrimonios"
         prepend-icon="mdi-circle-small"
-        to="/a/registration/marriages"
+        to="/marriages"
         link
         exact
       />
     </v-list-group>
 
     <v-list-group
+      v-permission="[
+        'menu_personas',
+        'menu_ministros',
+        'menu_libros',
+        'menu_parroquias',
+      ]"
       value="settings"
-      v-permission="['positions.index', 'offices.index', 'workers.index']"
     >
       <template v-slot:activator="{ props }">
         <v-list-item
@@ -69,43 +59,46 @@
       </template>
 
       <v-list-item
-        title="Información General"
+        v-permission="['menu_personas']"
+        title="Personas"
         prepend-icon="mdi-circle-small"
-        to="/a/general-infomation"
+        to="/people"
         link
         exact
-        v-permission="['branches.my-branch']"
       />
 
       <v-list-item
-        title="Cargos"
+        title="Ministros"
         prepend-icon="mdi-circle-small"
-        to="/a/positions"
+        to="/ministers"
         link
         exact
-        v-permission="['positions.index']"
+        v-permission="['menu_ministros']"
       />
 
       <v-list-item
-        title="Oficinas"
+        title="Libros"
         prepend-icon="mdi-circle-small"
-        to="/a/offices"
+        to="/books"
         link
         exact
-        v-permission="['offices.index']"
+        v-permission="['menu_libros']"
       />
 
       <v-list-item
-        title="Trabajadores"
+        title="Parroquias"
         prepend-icon="mdi-circle-small"
-        to="/a/workers"
+        to="/parishes"
         link
         exact
-        v-permission="['workers.index']"
+        v-permission="['menu_parroquias']"
       />
     </v-list-group>
 
-    <v-list-group value="security" v-permission="['users.index']">
+    <v-list-group
+      v-permission="['menu_usuarios', 'menu_roles']"
+      value="security"
+    >
       <template v-slot:activator="{ props }">
         <v-list-item
           v-bind="props"
@@ -117,10 +110,26 @@
       <v-list-item
         title="Usuarios"
         prepend-icon="mdi-circle-small"
-        to="/a/users"
+        to="/users"
         link
         exact
-        v-permission="['users.index']"
+        v-permission="['menu_usuarios']"
+      />
+      <v-list-item
+        title="Roles"
+        prepend-icon="mdi-circle-small"
+        to="/roles"
+        link
+        exact
+        v-permission="['menu_roles']"
+      />
+      <v-list-item
+        title="Permisos"
+        prepend-icon="mdi-circle-small"
+        to="/permissions"
+        v-permission="['_only_super_']"
+        link
+        exact
       />
     </v-list-group>
   </v-list>

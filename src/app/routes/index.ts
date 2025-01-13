@@ -7,7 +7,7 @@ import {
 
 const routes: RouteRecordRaw[] = [
   {
-    path: "/",
+    path: "/auth",
     name: "AuthLayout",
     component: () => import("@/common/ui/layouts/AuthLayout.vue"),
     beforeEnter: noAuthMiddleware,
@@ -15,13 +15,13 @@ const routes: RouteRecordRaw[] = [
       {
         path: "",
         name: "Login",
-        component: () => import("@/app/modules/auth/views/index.vue"),
+        component: () => import("@/app/modules/core/auth/views/index.vue"),
       },
     ],
   },
 
   {
-    path: "/a",
+    path: "/",
     name: "AdminLayout",
     component: () => import("@/common/ui/layouts/AdminLayout.vue"),
     beforeEnter: authMiddleware,
@@ -32,62 +32,81 @@ const routes: RouteRecordRaw[] = [
         component: () => import("@/app/modules/dashboard/views/index.vue"),
       },
       {
-        path: "registration",
-        name: "Registration",
-        children: [
-          {
-            path: "baptisms",
-            name: "Baptisms",
-            component: () =>
-              import("@/app/modules/registration/views/baptisms.vue"),
-          },
-          {
-            path: "confirmations",
-            name: "Confirmations",
-            component: () =>
-              import("@/app/modules/registration/views/confirmations.vue"),
-          },
-          {
-            path: "marriages",
-            name: "Marriages",
-            component: () =>
-              import("@/app/modules/registration/views/marriages.vue"),
-          },
-        ],
-      },
-      {
-        path: "certificates",
-        name: "Certificates",
-        component: () => import("@/app/modules/certificate/views/index.vue"),
-      },
-      {
-        path: "positions",
-        name: "Positions",
-        component: () => import("@/app/modules/position/views/index.vue"),
-      },
-
-      {
-        path: "offices",
-        name: "Offices",
-        component: () => import("@/app/modules/office/views/index.vue"),
-      },
-      {
-        path: "general-infomation",
-        name: "GeneralInfomation",
-        component: () => import("@/app/modules/branch/views/my-branch.vue"),
-      },
-      //worker
-      {
-        path: "workers",
-        name: "Workers",
-        component: () => import("@/app/modules/worker/views/index.vue"),
-      },
-
-      //user
-      {
         path: "users",
         name: "Users",
-        component: () => import("@/app/modules/user/views/index.vue"),
+        component: () => import("@/app/modules/core/user/views/index.vue"),
+      },
+
+      {
+        path: "permissions",
+        name: "Permissions",
+        component: () =>
+          import("@/app/modules/core/permission/views/index.vue"),
+      },
+      {
+        path: "roles",
+        name: "roles",
+        component: () => import("@/app/modules/core/role/views/index.vue"),
+      },
+      //books
+      {
+        path: "books",
+        name: "Books",
+        component: () => import("@/app/modules/book/views/index.vue"),
+      },
+      //baptisms
+      {
+        path: "baptisms",
+        name: "Baptisms",
+        component: () => import("@/app/modules/baptism/views/index.vue"),
+      },
+      {
+        path: "baptism/:id/participants",
+        name: "BaptismParticipants",
+        component: () =>
+          import("@/app/modules/baptism/views/baptism-participant.vue"),
+      },
+      {
+        path: "ministers",
+        name: "Ministers",
+        component: () => import("@/app/modules/ministers/views/index.vue"),
+      },
+      {
+        path: "parishes",
+        name: "Parishes",
+        component: () => import("@/app/modules/parish/views/index.vue"),
+      },
+      //people
+      {
+        path: "people",
+        name: "People",
+        component: () => import("@/app/modules/people/views/index.vue"),
+      },
+      //confirmations
+      {
+        path: "confirmations",
+        name: "Confirmations",
+        component: () => import("@/app/modules/confirmation/views/index.vue"),
+      },
+      {
+        path: "confirmation/:id/participants",
+        name: "ConfirmationParticipants",
+        component: () =>
+          import(
+            "@/app/modules/confirmation/views/confirmation-participant.vue"
+          ),
+      },
+      //marriages
+      {
+        path: "marriages",
+        name: "Marriages",
+        component: () => import("@/app/modules/marriage/views/index.vue"),
+      },
+      {
+        path: "marriage/:id/participants",
+        name: "MarriageParticipants",
+        component: () =>
+          import("@/app/modules/marriage/views/marriage-participant.vue"),
       },
     ],
   },
