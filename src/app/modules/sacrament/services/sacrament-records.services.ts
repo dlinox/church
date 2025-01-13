@@ -121,3 +121,28 @@ export const _getBaptismPerson = async (personId: number): Promise<any> => {
     return null;
   }
 };
+
+export const _searchActs = async (search: string): Promise<any> => {
+  try {
+    const token = getSessionToken() as string;
+    const response = await http(token, baseUrl).get(
+      `/search-acts/${search}`
+    );
+    return response.data.data;
+  } catch (error) {
+    return null;
+  }
+};
+
+// report-count-record-by-type
+export const _reportCountRecordByType = async (): Promise<any> => {
+  try {
+    const token = getSessionToken() as string;
+    const response = await http(token, baseUrl).get(
+      `/report-count-record-by-type`
+    );
+    return response.data.data;
+  } catch (error) {
+    return null;
+  }
+};

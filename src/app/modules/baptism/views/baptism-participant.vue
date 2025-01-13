@@ -53,12 +53,23 @@
               md="4"
               class="d-md-flex d-block justify-end text-end"
             >
-              <v-btn prepend-icon="mdi-plus" class="me-2" :disabled="loading">
+              <v-btn
+                v-permission="['crear_acta_bautismo']"
+                prepend-icon="mdi-plus"
+                class="me-2"
+                :disabled="loading"
+              >
                 acta
+
                 <FormAct @onSuccess="init" />
               </v-btn>
 
-              <v-btn prepend-icon="mdi-plus" class="me-2" :disabled="loading">
+              <v-btn
+                v-permission="['agregar_participante_bautismo']"
+                prepend-icon="mdi-plus"
+                class="me-2"
+                :disabled="loading"
+              >
                 participante
                 <BaptismParticipantForm @onSuccess="init" />
               </v-btn>
@@ -82,6 +93,12 @@
       </template>
       <template v-slot:item.actions="{ item, loadDataTable }">
         <v-btn
+          v-permission="[
+            'editar_acta_bautismo',
+            'imprimir_acta_bautismo',
+            'anular_acta_bautismo',
+            'eliminar_acta_bautismo',
+          ]"
           icon
           size="small"
           variant="text"
@@ -92,6 +109,7 @@
           <v-menu activator="parent">
             <v-list nav>
               <v-list-item
+                v-permission="['editar_acta_bautismo']"
                 v-if="item.status && item.issueDate === null"
                 title="Editar"
                 density="compact"
@@ -105,6 +123,7 @@
               </v-list-item>
 
               <v-list-item
+                v-permission="['imprimir_acta_bautismo']"
                 v-if="item.status && item.issueDate !== null"
                 title="Imprimir Acta"
                 density="compact"
@@ -117,6 +136,7 @@
               </v-list-item>
 
               <v-list-item
+                v-permission="['anular_acta_bautismo']"
                 v-if="item.status && item.issueDate !== null"
                 title="Anular"
                 class="text-red"
@@ -130,6 +150,7 @@
               </v-list-item>
 
               <v-list-item
+                v-permission="['eliminar_acta_bautismo']"
                 v-if="item.issueDate == null"
                 title="Eliminar"
                 class="text-red"

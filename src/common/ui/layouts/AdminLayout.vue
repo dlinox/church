@@ -10,7 +10,13 @@
             prepend-avatar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoPYGvsOKyoPhMLvER1SNT4W3RyX6VPeXTxg&s"
           >
             <template v-slot:append>
-              <v-btn icon density="compact" variant="tonal">
+              <v-btn
+                @click="signOutBtn"
+                icon
+                density="compact"
+                variant="tonal"
+                :loading="loading"
+              >
                 <v-icon>mdi-logout</v-icon>
               </v-btn>
             </template>
@@ -50,8 +56,13 @@ import { ref } from "vue";
 import { useAuthStore } from "@/app/store/auth.stores";
 import AppMenu from "./components/AppMenu.vue";
 import { useTheme } from "vuetify";
+import { useRouter } from "vue-router";
+
+import { signOut } from "@/app/modules/core/auth/services";
 
 const theme = useTheme();
+const router = useRouter();
+const loading = ref<boolean>(false);
 
 const toggleTheme = () => {
   theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
@@ -59,4 +70,13 @@ const toggleTheme = () => {
 
 const authStore = useAuthStore();
 const drawer = ref(true);
+
+const signOutBtn = async () => {
+  loading.value = true;
+  const res = await signOut();
+  if (res) {
+    router.push({ name: "Login" });
+  }
+  loading.value = false;
+};
 </script>

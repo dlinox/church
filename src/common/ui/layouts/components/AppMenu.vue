@@ -9,7 +9,14 @@
       exact
     />
 
-    <v-list-group value="celebrations">
+    <v-list-group
+      v-permission="[
+        'menu_bautismos',
+        'menu_confirmaciones',
+        'menu_matrimonios',
+      ]"
+      value="celebrations"
+    >
       <template v-slot:activator="{ props }">
         <v-list-item
           v-bind="props"
@@ -19,6 +26,7 @@
       </template>
 
       <v-list-item
+        v-permission="['menu_bautismos']"
         title="Bautismos"
         prepend-icon="mdi-circle-small"
         to="/baptisms"
@@ -26,6 +34,7 @@
         exact
       />
       <v-list-item
+        v-permission="['menu_confirmaciones']"
         title="Confirmaciones"
         prepend-icon="mdi-circle-small"
         to="/confirmations"
@@ -33,6 +42,7 @@
         exact
       />
       <v-list-item
+        v-permission="['menu_matrimonios']"
         title="Matrimonios"
         prepend-icon="mdi-circle-small"
         to="/marriages"

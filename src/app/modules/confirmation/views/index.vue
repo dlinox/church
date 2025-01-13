@@ -27,7 +27,11 @@
               md="4"
               class="d-md-flex d-block justify-end text-end"
             >
-              <v-btn class="me-2" :disabled="loading">
+              <v-btn
+                v-permission="['crear_celebracion_confirmacion']"
+                class="me-2"
+                :disabled="loading"
+              >
                 nuevo
                 <Form
                   type="2"
@@ -48,11 +52,24 @@
         </v-card-item>
       </template>
       <template v-slot:item.actions="{ item, loadDataTable }">
-        <v-btn icon size="small" variant="text">
+        <v-btn
+          v-permission="[
+            'editar_celebracion_confirmacion',
+            'eliminar_celebracion_confirmacion',
+          ]"
+          icon
+          size="small"
+          variant="text"
+        >
           <v-icon> mdi-dots-vertical </v-icon>
           <v-menu activator="parent">
             <v-list nav>
-              <v-list-item title="Editar" density="compact" value="edit">
+              <v-list-item
+                v-permission="['editar_celebracion_confirmacion']"
+                title="Editar"
+                density="compact"
+                value="edit"
+              >
                 <template #prepend>
                   <v-icon size="small"> mdi-pencil </v-icon>
                 </template>
@@ -64,6 +81,7 @@
                 />
               </v-list-item>
               <v-list-item
+                v-permission="['eliminar_celebracion_confirmacion']"
                 title="Eliminar"
                 class="text-red"
                 density="compact"

@@ -59,7 +59,7 @@
   </v-dialog>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import {
   _getPrintData,
   _printRecord,
@@ -110,5 +110,12 @@ const init = async () => {
   await getPrintData();
 };
 
-init();
+watch(
+  () => dialog.value,
+  (value) => {
+    if (value) {
+      init();
+    }
+  }
+);
 </script>
