@@ -1,1 +1,0 @@
-import{_ as t,c as a,w as c,r as e,o as r,a as s}from"./index-DEEauFT0.js";const _={};function i(d,l){const n=e("v-container"),o=e("v-card");return r(),a(o,{title:"Dashboard",subtitle:"Bienvenido a la aplicación"},{default:c(()=>[s(n,{fluid:""})]),_:1})}const p=t(_,[["render",i]]);export{p as default};

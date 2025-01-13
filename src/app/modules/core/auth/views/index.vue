@@ -56,8 +56,8 @@ import { signIn } from "../services";
 import { type AuthRequestDTO, AuthFormRules } from "../models";
 
 const form = ref<AuthRequestDTO>({
-  username: "linox",
-  password: "password",
+  username: "",
+  password: "",
 });
 
 const loading = ref(false);

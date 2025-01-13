@@ -1,1 +1,0 @@
-import{j as o,k as r}from"./index-DEEauFT0.js";const a="http://lnx.simple.auth.test/api/select-items",p=async()=>{try{const t=o();return(await r(t,a).get("/roles")).data.data}catch{return[]}},i=async(t,s)=>{try{const e=o();return(await r(e,a).get(`/books/${t}/${s}`)).data.data}catch{return[]}};export{p as _,i as a};
