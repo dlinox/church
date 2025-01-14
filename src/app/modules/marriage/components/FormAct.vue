@@ -31,6 +31,7 @@
                       v-model="form.sacramentBookId"
                       :service="booksItems"
                       label="Libro"
+                      :min-chars="1"
                       autocomplete="off"
                       return-object
                       @update:model-value="

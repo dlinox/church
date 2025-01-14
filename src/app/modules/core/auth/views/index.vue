@@ -2,7 +2,9 @@
   <v-container
     class="h-100 d-flex justify-space-between align-center flex-column"
   >
-    <div></div>
+    <div>
+      <img :src="LogoApp" alt="logo" class="mb-4" width="180" />
+    </div>
     <v-card class="bg-transparent" elevation="0">
       <v-card-item>
         <h2 class="">Bienvenido de nuevo</h2>
@@ -51,7 +53,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-
+import { LogoApp } from "@/common/resources/images";
 import { signIn } from "../services";
 import { type AuthRequestDTO, AuthFormRules } from "../models";
 

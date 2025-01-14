@@ -88,6 +88,7 @@
                       label="Libro"
                       autocomplete="off"
                       return-object
+                      :min-chars="1"
                       @update:model-value="
                         $event != null
                           ? getBookNumbering($event.value)
