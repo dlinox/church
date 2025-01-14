@@ -188,7 +188,7 @@ export const headersMarriageParticipants: DataTableHeaderDTO[] = [
   },
 
   {
-    title: "Observación",
+    title: "Anotaciones marginales",
     key: "observation",
     value: "observation",
   },

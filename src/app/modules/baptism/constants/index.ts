@@ -79,7 +79,7 @@ export const headersParticipants: DataTableHeaderDTO[] = [
   },
 
   {
-    title: "Observación",
+    title: "Anotaciones marginales",
     key: "observation",
     value: "observation",
   },

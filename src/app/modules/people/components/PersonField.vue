@@ -18,7 +18,7 @@
 
     <v-list-item v-if="person">
       <v-list-item-title>
-        {{ person?.documentType.title }} - {{ person?.documentNumber }} |
+        {{ person?.documentType?.title }} - {{ person?.documentNumber }} |
         {{ person?.name }} {{ person?.paternalLastName }}
         {{ person?.maternalLastName }}
       </v-list-item-title>

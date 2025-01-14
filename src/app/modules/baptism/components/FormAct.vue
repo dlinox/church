@@ -32,6 +32,7 @@
                       :service="booksItems"
                       label="Libro"
                       autocomplete="off"
+                      :min-chars="1"
                       return-object
                       @update:model-value="
                         $event != null

@@ -176,8 +176,6 @@
       </template>
     </LnxDataTable>
   </v-card>
-
-  <iframe id="printFrame" style="display: none"></iframe>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";

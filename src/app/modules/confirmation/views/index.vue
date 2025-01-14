@@ -31,7 +31,7 @@
                 v-permission="['crear_celebracion_confirmacion']"
                 class="me-2"
                 :disabled="loading"
-              >
+              > 
                 nuevo
                 <Form
                   type="2"

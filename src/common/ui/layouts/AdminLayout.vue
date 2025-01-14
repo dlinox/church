@@ -45,6 +45,7 @@
       <RouterView />
     </v-main>
     <v-footer app>
+      <iframe id="printFrame" style="display: none"></iframe>
       <v-spacer> </v-spacer>
       <small> Lnx &copy; {{ new Date().getFullYear() }} </small>
     </v-footer>
