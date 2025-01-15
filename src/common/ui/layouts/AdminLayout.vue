@@ -47,7 +47,10 @@
     <v-footer app>
       <iframe id="printFrame" style="display: none"></iframe>
       <v-spacer> </v-spacer>
-      <small> Lnx &copy; {{ new Date().getFullYear() }} </small>
+      <small>
+        <a href="https://caripperu.com/" target="_blank">CARIP PERU</a>
+        - Versión 1.0
+      </small>
     </v-footer>
   </v-app>
 </template>

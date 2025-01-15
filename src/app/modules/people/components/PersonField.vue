@@ -78,7 +78,6 @@ const person = ref<any>(null);
 
 const value = computed({
   get: () => {
-    console.log(props.title, ":", props.modelValue);
 
     if (props.modelValue.personId) {
       getPerson(props.modelValue.personId);

@@ -114,7 +114,6 @@ const searchSelect = debounce(async (search: string) => {
 }, 300);
 
 const onSelect = (item: any) => {
-  console.log(item);
 
   emit("onSelect", item);
   dialog.value = false;

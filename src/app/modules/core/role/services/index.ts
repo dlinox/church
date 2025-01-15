@@ -51,7 +51,6 @@ export const _getAllPermissions = async (): Promise<any[]> => {
   try {
     const token = getSessionToken() as string;
     const response = await http(token, baseUrl).get("/all-permissions");
-    console.log(response.data);
     return response.data.data as any[];
   } catch (error) {
     return [];

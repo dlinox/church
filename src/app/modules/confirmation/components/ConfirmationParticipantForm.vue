@@ -63,6 +63,7 @@
                     <v-icon>mdi-plus</v-icon>
                   </template>
                   <ExternalBaptismForm
+                    type="2"
                     :id="form.roles[0].personId"
                     @onSuccess="getBaptism(form.roles[0].personId)"
                   />
@@ -199,8 +200,7 @@ const form = ref<any>({
 
 const getBaptism = async (id: number) => {
   let res = await _getBaptismPerson(id);
-  console.log("getBaptism", res);
-  baptism.value = res;
+  baptism.value = res.baptism;
 };
 
 const submit = async () => {
@@ -217,6 +217,5 @@ const submit = async () => {
     dialog.value = false;
   }
   loading.value = false;
-  console.log("submit", form.value);
 };
 </script>

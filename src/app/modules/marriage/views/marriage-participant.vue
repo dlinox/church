@@ -66,7 +66,7 @@
                 <FormAct @onSuccess="init" />
               </v-btn>
 
-              <v-btn
+              <!-- <v-btn
                 v-permission="['agregar_participante_matrimonio']"
                 prepend-icon="mdi-plus"
                 class="me-2"
@@ -74,7 +74,7 @@
               >
                 participante
                 <MarriageParticipantForm @onSuccess="init" />
-              </v-btn>
+              </v-btn> -->
               <v-btn
                 density="comfortable"
                 icon="mdi-reload"
@@ -191,7 +191,7 @@ import {
 import { _getSacramentById } from "@/app/modules/sacrament/services/sacrament.services.ts";
 import { headersMarriageParticipants } from "@/app/modules/sacrament/constants/sacrament.constants.ts";
 
-import MarriageParticipantForm from "@/app/modules/marriage/components/MarriageParticipantForm.vue";
+// import MarriageParticipantForm from "@/app/modules/marriage/components/MarriageParticipantForm.vue";
 import DefineParameters from "@/app/modules/sacrament/components/DefineParameters.vue";
 
 import FormAct from "@/app/modules/marriage/components/FormAct.vue";

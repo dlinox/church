@@ -151,6 +151,5 @@ const submit = async () => {
     dialog.value = false;
   }
   loading.value = false;
-  console.log("submit", form.value);
 };
 </script>

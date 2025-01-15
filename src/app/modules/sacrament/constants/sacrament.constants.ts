@@ -11,7 +11,7 @@ export const headers: DataTableHeaderDTO[] = [
   },
   {
     title: "Fecha de celebración",
-    key: "dateFormatted",
+    key: "sacraments.date",
     value: "dateFormatted",
   },
   {
@@ -24,6 +24,7 @@ export const headers: DataTableHeaderDTO[] = [
     title: "Parroquia",
     key: "parish.name",
     value: "parish.name",
+    sortable: false,
   },
   {
     title: "Participantes",

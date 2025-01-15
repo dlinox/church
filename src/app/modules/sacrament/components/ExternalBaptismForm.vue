@@ -1,13 +1,13 @@
 <template>
   <v-dialog max-width="500" v-model="dialog" activator="parent" persistent>
     <v-form ref="formRef" @submit.prevent="submit">
-      <v-card title="Registrar Bautismo Externo">
+      <v-card title="Nuevo registro externo">
         <v-card-item class="border-t border-b">
           <v-row>
             <v-col cols="12">
               <v-text-field
                 v-model="form.date"
-                label="Fecha de Bautismo"
+                label="Fecha de celebración"
                 type="date"
               />
             </v-col>
@@ -15,7 +15,7 @@
               <LnxAutocompleteServer
                 v-model="form.parish"
                 :service="_parishItems"
-                label="Libro predeterminado"
+                label="Parroquia de celebración"
                 autocomplete="off"
               />
             </v-col>
@@ -45,13 +45,15 @@ import LnxAutocompleteServer from "@/common/ui/components/LnxAutocompleteServer.
 
 const emit = defineEmits(["onSuccess"]);
 const props = defineProps<{
-  id: any;
+  id: number;
+  type: string;
 }>();
 
 const form = ref({
   personId: props.id,
   date: null,
   parish: null,
+  type: props.type,
 });
 
 const dialog = ref<boolean>(false);

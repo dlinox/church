@@ -85,7 +85,6 @@ const getPrintData = async () => {
   const data = await _getPrintData(props.record);
   printData.value = data;
   loading.value = false;
-  console.log(data);
 };
 
 const printRecord = async () => {

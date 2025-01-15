@@ -78,70 +78,11 @@
                 <v-col cols="6">
                   <v-row no-gutters>
                     <v-col cols="12">
-                      <v-card-item>
-                        <v-row>
-                          <v-col cols="12">
-                            <span class="text-subtitle-2 text-secondary">
-                              Información del bautismo del esposo
-                            </span>
-                          </v-col>
-                          <v-col
-                            v-if="form.roles[0].personId && baptismHusband"
-                            cols="12"
-                            class="bg-green-lighten-5"
-                          >
-                            <v-list-item>
-                              <v-list-item-subtitle>
-                                Lugar de bautismo
-                              </v-list-item-subtitle>
-                              <v-list-item-title>
-                                {{ baptismHusband.parish }}
-                              </v-list-item-title>
-                            </v-list-item>
-                            <v-list-item>
-                              <v-list-item-subtitle>
-                                Fecha de bautismo
-                              </v-list-item-subtitle>
-                              <v-list-item-title>
-                                {{ baptismHusband.date }}
-                              </v-list-item-title>
-                            </v-list-item>
-                          </v-col>
-                          <v-col v-if="!form.roles[0].personId" cols="12">
-                            <v-alert
-                              dense
-                              variant="tonal"
-                              color="info"
-                              icon="mdi-information"
-                              class="text-subtitle-2"
-                            >
-                              Selecciona a la persona que recibió el sacramento
-                            </v-alert>
-                          </v-col>
-                          <v-col
-                            v-if="form.roles[0].personId && !baptismHusband"
-                            cols="12"
-                          >
-                            <v-btn block variant="outlined">
-                              <template #prepend>
-                                <v-icon>mdi-plus</v-icon>
-                              </template>
-                              <ExternalBaptismForm
-                                :id="form.roles[0].personId"
-                                @onSuccess="
-                                  getBaptismHusband(form.roles[0].personId)
-                                "
-                              />
-                              bautismo externo
-                            </v-btn>
-                          </v-col>
-                        </v-row>
-                      </v-card-item>
                       <PersonField
                         family
                         v-model="form.roles[0]"
                         title="Esposo"
-                        @onSelected="getBaptismHusband"
+                        @onSelected="getSacramentsHusband"
                       />
                     </v-col>
                     <v-col cols="6">
@@ -161,70 +102,11 @@
                 <v-col cols="6">
                   <v-row no-gutters>
                     <v-col cols="12">
-                      <v-card-item>
-                        <v-row>
-                          <v-col cols="12">
-                            <span class="text-subtitle-2 text-secondary">
-                              Información del bautismo de la esposa
-                            </span>
-                          </v-col>
-                          <v-col
-                            v-if="form.roles[1].personId && baptismWife"
-                            cols="12"
-                            class="bg-green-lighten-5"
-                          >
-                            <v-list-item>
-                              <v-list-item-subtitle>
-                                Lugar de bautismo
-                              </v-list-item-subtitle>
-                              <v-list-item-title>
-                                {{ baptismWife.parish }}
-                              </v-list-item-title>
-                            </v-list-item>
-                            <v-list-item>
-                              <v-list-item-subtitle>
-                                Fecha de bautismo
-                              </v-list-item-subtitle>
-                              <v-list-item-title>
-                                {{ baptismWife.date }}
-                              </v-list-item-title>
-                            </v-list-item>
-                          </v-col>
-                          <v-col v-if="!form.roles[1].personId" cols="12">
-                            <v-alert
-                              dense
-                              variant="tonal"
-                              color="info"
-                              icon="mdi-information"
-                              class="text-subtitle-2"
-                            >
-                              Selecciona a la persona que recibió el sacramento
-                            </v-alert>
-                          </v-col>
-                          <v-col
-                            v-if="form.roles[1].personId && !baptismWife"
-                            cols="12"
-                          >
-                            <v-btn block variant="outlined">
-                              <template #prepend>
-                                <v-icon>mdi-plus</v-icon>
-                              </template>
-                              <ExternalBaptismForm
-                                :id="form.roles[1].personId"
-                                @onSuccess="
-                                  getBaptismWife(form.roles[1].personId)
-                                "
-                              />
-                              bautismo externo
-                            </v-btn>
-                          </v-col>
-                        </v-row>
-                      </v-card-item>
                       <PersonField
                         family
                         v-model="form.roles[1]"
                         title="Esposa"
-                        @onSelected="getBaptismWife"
+                        @onSelected="getSacramentsWife"
                       />
                     </v-col>
                     <v-col cols="6">
@@ -248,7 +130,263 @@
                 <v-col cols="6">
                   <PersonField v-model="form.roles[3]" title="Madrina" />
                 </v-col>
+                <v-col cols="6">
+                  <PersonField v-model="form.roles[4]" title="Testigo 1" />
+                </v-col>
+                <v-col cols="6">
+                  <PersonField v-model="form.roles[5]" title="Testigo 2" />
+                </v-col>
               </v-row>
+
+              <v-card-item>
+                <v-row :no-gutters="false">
+                  <v-col cols="12">
+                    <span class="text-subtitle-2 text-secondary">
+                      Requisitos del matrimonio
+                    </span>
+                  </v-col>
+                  <v-col cols="6">
+                    <v-row :no-gutters="false">
+                      <v-col cols="12"> Bautismo / Esposo </v-col>
+                      <v-col
+                        v-if="form.roles[0].personId && baptismHusband?.baptism"
+                        cols="12"
+                        class="bg-green-lighten-5"
+                      >
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Lugar de bautismo
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismHusband?.baptism?.parish }}
+                          </v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Fecha de bautismo
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismHusband?.baptism?.date }}
+                          </v-list-item-title>
+                        </v-list-item>
+                      </v-col>
+                      <v-col v-if="!form.roles[0].personId" cols="12">
+                        <v-alert
+                          density="compact"
+                          variant="tonal"
+                          color=""
+                          icon="mdi-information"
+                          class="text-subtitle-2"
+                        >
+                          Registro del bautismo del esposo
+                        </v-alert>
+                      </v-col>
+                      <v-col
+                        v-if="
+                          form.roles[0].personId && !baptismHusband?.baptism
+                        "
+                        cols="12"
+                      >
+                        <v-btn block variant="outlined">
+                          <template #prepend>
+                            <v-icon>mdi-plus</v-icon>
+                          </template>
+                          <ExternalBaptismForm
+                            type="1"
+                            :id="form.roles[0].personId"
+                            @onSuccess="
+                              getSacramentsHusband(form.roles[0].personId)
+                            "
+                          />
+                          bautismo externo
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                  <v-col cols="6">
+                    <v-row>
+                      <v-col cols="12"> Confirmation / Esposo </v-col>
+                      <v-col
+                        v-if="
+                          form.roles[0].personId && baptismHusband?.confirmation
+                        "
+                        cols="12"
+                        class="bg-green-lighten-5"
+                      >
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Lugar de confirmación
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismHusband?.confirmation?.parish }}
+                          </v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Fecha de confirmación
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismHusband?.confirmation?.date }}
+                          </v-list-item-title>
+                        </v-list-item>
+                      </v-col>
+                      <v-col v-if="!form.roles[0].personId" cols="12">
+                        <v-alert
+                          density="compact"
+                          variant="tonal"
+                          color=""
+                          icon="mdi-information"
+                          class="text-subtitle-2"
+                        >
+                          Registro de la confirmación del esposo
+                        </v-alert>
+                      </v-col>
+                      <v-col
+                        v-if="
+                          form.roles[0].personId &&
+                          !baptismHusband?.confirmation
+                        "
+                        cols="12"
+                      >
+                        <v-btn block variant="outlined">
+                          <template #prepend>
+                            <v-icon>mdi-plus</v-icon>
+                          </template>
+                          <ExternalBaptismForm
+                            type="2"
+                            :id="form.roles[0].personId"
+                            @onSuccess="
+                              getSacramentsHusband(form.roles[0].personId)
+                            "
+                          />
+                          confirmación externa
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </v-card-item>
+
+              <v-card-item>
+                <v-row :no-gutters="false">
+                  <v-col cols="6">
+                    <v-row :no-gutters="false">
+                      <v-col cols="12"> Bautismo / Esposa </v-col>
+                      <v-col
+                        v-if="form.roles[1].personId && baptismWife?.baptism"
+                        cols="12"
+                        class="bg-green-lighten-5"
+                      >
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Lugar de bautismo
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismWife?.baptism?.parish }}
+                          </v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Fecha de bautismo
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismWife?.baptism?.date }}
+                          </v-list-item-title>
+                        </v-list-item>
+                      </v-col>
+                      <v-col v-if="!form.roles[1].personId" cols="12">
+                        <v-alert
+                          density="compact"
+                          variant="tonal"
+                          color=""
+                          icon="mdi-information"
+                          class="text-subtitle-2"
+                        >
+                          Registro del bautismo de la esposa
+                        </v-alert>
+                      </v-col>
+                      <v-col
+                        v-if="form.roles[1].personId && !baptismWife?.baptism"
+                        cols="12"
+                      >
+                        <v-btn block variant="outlined">
+                          <template #prepend>
+                            <v-icon>mdi-plus</v-icon>
+                          </template>
+                          <ExternalBaptismForm
+                            type="1"
+                            :id="form.roles[1].personId"
+                            @onSuccess="
+                              getSacramentsWife(form.roles[1].personId)
+                            "
+                          />
+                          bautismo externo
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                  <v-col cols="6">
+                    <v-row>
+                      <v-col cols="12"> Confirmation / Esposa </v-col>
+                      <v-col
+                        v-if="
+                          form.roles[1].personId && baptismWife?.confirmation
+                        "
+                        cols="12"
+                        class="bg-green-lighten-5"
+                      >
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Lugar de confirmación
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismWife?.confirmation?.parish }}
+                          </v-list-item-title>
+                        </v-list-item>
+                        <v-list-item>
+                          <v-list-item-subtitle>
+                            Fecha de confirmación
+                          </v-list-item-subtitle>
+                          <v-list-item-title>
+                            {{ baptismWife?.confirmation?.date }}
+                          </v-list-item-title>
+                        </v-list-item>
+                      </v-col>
+                      <v-col v-if="!form.roles[1].personId" cols="12">
+                        <v-alert
+                          density="compact"
+                          variant="tonal"
+                          color=""
+                          icon="mdi-information"
+                          class="text-subtitle-2"
+                        >
+                          Registro de la confirmación de la esposa
+                        </v-alert>
+                      </v-col>
+                      <v-col
+                        v-if="
+                          form.roles[1].personId && !baptismWife?.confirmation
+                        "
+                        cols="12"
+                      >
+                        <v-btn block variant="outlined">
+                          <template #prepend>
+                            <v-icon>mdi-plus</v-icon>
+                          </template>
+                          <ExternalBaptismForm
+                            type="2"
+                            :id="form.roles[1].personId"
+                            @onSuccess="
+                              getSacramentsWife(form.roles[1].personId)
+                            "
+                          />
+                          confirmación externa
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </v-card-item>
             </v-col>
           </v-row>
         </v-card-text>
@@ -296,7 +434,7 @@ import ExternalBaptismForm from "@/app/modules/sacrament/components/ExternalBapt
 import {
   _saveItem,
   _getRecordById,
-  _getBaptismPerson,
+  _getSacramentsPerson,
 } from "@/app/modules/sacrament/services/sacrament-records.services";
 
 const route = useRoute();
@@ -362,6 +500,14 @@ const defaultForm = () => ({
       role: "5",
       personId: null,
     },
+    {
+      role: "6",
+      personId: null,
+    },
+    {
+      role: "7",
+      personId: null,
+    },
   ],
 });
 
@@ -369,14 +515,12 @@ const form = ref<any>({
   ...defaultForm(),
 });
 
-const getBaptismHusband = async (id: number) => {
-  let res = await _getBaptismPerson(id);
+const getSacramentsHusband = async (id: number) => {
+  let res = await _getSacramentsPerson(id);
   baptismHusband.value = res;
 };
-
-const getBaptismWife = async (id: number) => {
-  let res = await _getBaptismPerson(id);
-  console.log("getBaptism", res);
+const getSacramentsWife = async (id: number) => {
+  let res = await _getSacramentsPerson(id);
   baptismWife.value = res;
 };
 
@@ -399,6 +543,7 @@ const getRecord = async (id: number) => {
     form.value.roles.map((role: any) => {
       if (role.role == item.role) {
         role.personId = item.personId;
+
         if (role.family && item.family) {
           role.family.map((family: any) => {
             item.family.map((f: any) => {

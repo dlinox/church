@@ -114,20 +114,34 @@ export const _getBaptismPerson = async (personId: number): Promise<any> => {
   try {
     const token = getSessionToken() as string;
     const response = await http(token, baseUrl).get(
-      `/get-baptism-person/${personId}`
+      `/get-sacraments-person/${personId}`
+    );
+    return response.data.data?.baptism;
+  } catch (error) {
+    return null;
+  }
+};
+
+//get-sacraments-person
+export const _getSacramentsPerson = async (personId: number): Promise<any> => {
+  try {
+    const token = getSessionToken() as string;
+    const response = await http(token, baseUrl).get(
+      `/get-sacraments-person/${personId}`
     );
     return response.data.data;
   } catch (error) {
-    return null;
+    return {
+      baptisms: null,
+      confirmations: null,
+    };
   }
 };
 
 export const _searchActs = async (search: string): Promise<any> => {
   try {
     const token = getSessionToken() as string;
-    const response = await http(token, baseUrl).get(
-      `/search-acts/${search}`
-    );
+    const response = await http(token, baseUrl).get(`/search-acts/${search}`);
     return response.data.data;
   } catch (error) {
     return null;

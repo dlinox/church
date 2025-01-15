@@ -15,7 +15,6 @@ export const signIn = async (form: AuthRequestDTO): Promise<boolean> => {
   try {
     let response = await http().post(`/auth/sign-in`, form);
 
-    console.log(response);
     setSessionToken(response.data.data.token);
     authStore.setAuthState(response.data.data, true);
     return true;

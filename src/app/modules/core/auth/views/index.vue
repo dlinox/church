@@ -5,7 +5,7 @@
     <div>
       <img :src="LogoApp" alt="logo" class="mb-4" width="180" />
     </div>
-    <v-card class="bg-transparent" elevation="0">
+    <v-card class="bg-white" elevation="0">
       <v-card-item>
         <h2 class="">Bienvenido de nuevo</h2>
         <p class="">Ingrese sus credenciales para acceder al sistema.</p>
@@ -47,7 +47,10 @@
     </v-card>
 
     <div class="text-center">
-      <small> Lnx &copy; {{ new Date().getFullYear() }} </small>
+      <small>
+        <a href="https://caripperu.com/" target="_blank">CARIP PERU</a>
+        - Versión 1.0
+      </small>
     </div>
   </v-container>
 </template>

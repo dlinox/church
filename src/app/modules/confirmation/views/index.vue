@@ -125,7 +125,7 @@ import {
   _loadDataTable,
   _deleteItem,
 } from "@/app/modules/sacrament/services/sacrament.services";
-import { headers } from "@/app/modules/sacrament/constants";
+import { headers } from "@/app/modules/sacrament/constants/sacrament.constants";
 import { _ministersItems } from "@/app/services/selectItems.services";
 
 import { ItemSelectDTO } from "@/common/models/ItemSelect.types";
